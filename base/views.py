@@ -20,8 +20,18 @@ from .models import Task
 
 def Home(request):
     return render(request,"base/index.html")
-    # template_name = 'base/index.html'
-    # fields = '__all__'
+
+def About(request):
+    return render(request,"base/about.html")
+
+def Services(request):
+    return render(request,"base/services.html")
+
+def Team(request):
+    return render(request,"base/team.html")
+
+def Contact(request):
+    return render(request,"base/contact.html")
 
 class CustomLoginView(LoginView):
     template_name = 'base/login.html'
