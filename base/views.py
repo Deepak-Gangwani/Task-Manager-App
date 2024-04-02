@@ -18,6 +18,11 @@ from django.contrib.auth import login
 from .models import Task
 
 
+def Home(request):
+    return render(request,"base/index.html")
+    # template_name = 'base/index.html'
+    # fields = '__all__'
+
 class CustomLoginView(LoginView):
     template_name = 'base/login.html'
     fields = '__all__'
