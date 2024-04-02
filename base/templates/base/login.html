@@ -3,46 +3,54 @@
 
 {% block content %}
 
-<div class="header-bar">
-    <h1>Login</h1>
-</div>
 
-<div class="card-body">
-    {% if form.non_field_errors %}
+<div class="container-fluid pt-5">
+    <div class="container pt-5">
 
-    <small class="text-danger">
-        {{ form.non_field_errors.as_ul }}
-    </small>
-
-    {% endif %}
-    <form class="row g-3" method="POST" action="{% url 'login' %}">
-        {% csrf_token %}
-        <div class="form-group">
-            <label for="{{ form.username.id_for_label }}" class="">Username:</label>
-            <input type="text" name="{{ form.username.name }}" class="form-control "
-                value="{{ form.username.value }}" />
-            {% if form.username.errors %}
-            <span class="text-danger">{{ form.username.errors }}</span>
-            {% endif %}
-        </div>
-
-        <div class="form-group password-field">
-            <label for="{{ form.password.id_for_label }}" class="">Password:</label>
-            <div class="input-group">
-                <input type="password" id="passwordInput" name="{{ form.password.name }}" class="form-control "
-                    value="{{ form.password.value }}" />
-                <div class="input-group-append">
-                    <button type="button" class="btn btn-outline-danger toggle-password"
-                        id="togglePassword">Show</button>
-                </div>
+        <div class="w-75 mt-5 mx-auto shadow-lg mb-5 bg-light rounded">
+            <div class="header-bar">
+                <h1>Login</h1>
             </div>
-            <span class="text-danger">{{ form.password.errors }}</span>
+
+            <div class="card-body">
+                {% if form.non_field_errors %}
+
+                <small class="text-danger">
+                    {{ form.non_field_errors.as_ul }}
+                </small>
+
+                {% endif %}
+                <form class="row g-3" method="POST" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="{{ form.username.id_for_label }}" class="">Username:</label>
+                        <input type="text" name="{{ form.username.name }}" class="form-control "
+                            value="{{ form.username.value }}" />
+                        {% if form.username.errors %}
+                        <span class="text-danger">{{ form.username.errors }}</span>
+                        {% endif %}
+                    </div>
+
+                    <div class="form-group password-field">
+                        <label for="{{ form.password.id_for_label }}" class="">Password:</label>
+                        <div class="input-group">
+                            <input type="password" id="passwordInput" name="{{ form.password.name }}"
+                                class="form-control " value="{{ form.password.value }}" />
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-outline-danger toggle-password"
+                                    id="togglePassword">Show</button>
+                            </div>
+                        </div>
+                        <span class="text-danger">{{ form.password.errors }}</span>
+                    </div>
+
+                    <button type="submit" class="button">Login</button>
+
+
+                </form>
+                <a href="{% url 'register' %}" class="btn btn-default text-danger">Create a new account</a>
+            </div>
         </div>
-
-        <button type="submit" class="button">Login</button>
-
-
-    </form>
-    <a href="{% url 'register' %}" class="btn btn-default text-danger">Create a new account</a>
+    </div>
 </div>
 {% endblock content %}

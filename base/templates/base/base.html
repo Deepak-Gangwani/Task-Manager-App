@@ -24,20 +24,8 @@
     <link rel="stylesheet" href="../../static/assets/css/templatemo-digimedia-v1.css">
     <link rel="stylesheet" href="../../static/assets/css/animated.css">
     <link rel="stylesheet" href="../../static/assets/css/owl.css">
-    <!--
 
-TemplateMo 568 DigiMedia
-
-https://templatemo.com/tm-568-digimedia
-
--->
-    <!-- <style>
-        body {
-            background-color: #FAFAFA;
-            font-family: 'Nunito', sans-serif;
-            padding-top: 50px;
-        }
-
+    <style>
         h1,
         h2,
         h3,
@@ -56,18 +44,7 @@ https://templatemo.com/tm-568-digimedia
             font-weight: 600;
         }
 
-        .container {
-            max-width: 550px;
-            margin: auto;
-            background-color: #fff;
-            -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
-            box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
-        }
 
-        input {
-            outline: none;
-            border: none;
-        }
 
         .header-bar {
             display: flex;
@@ -75,7 +52,9 @@ https://templatemo.com/tm-568-digimedia
             color: #fff;
             padding: 10px;
             border-radius: 5px 5px 0 0;
-            background: linear-gradient(90deg, #EEA390 0%, #EB796F 43%, #EB796F 100%);
+            /* background: linear-gradient(90deg, #EEA390 0%, #EB796F 43%, #EB796F 100%); */
+
+            background: linear-gradient(90deg, rgba(170,134,206,1) 0%, rgba(210,133,189,1) 58%);
         }
 
         .header-bar a {
@@ -218,20 +197,20 @@ https://templatemo.com/tm-568-digimedia
             /* color: white; */
             border: none !important;
             transition: none !important;
-            background-color: #333333 !important;
+            /* background-color: #333333 !important; */
             /* color: #b0afaf !important; */
         }
 
         .form-control:focus {
             /* color: red; */
             border-bottom: 3px solid #e87033 !important;
-            background-color: #333333 !important;
+            /* background-color: #333333 !important; */
             border-color: none !important;
             outline: 10 !important;
             box-shadow: none !important;
             transition: all 0.3s;
         }
-    </style> -->
+    </style>
 </head>
 
 <body>
@@ -251,7 +230,7 @@ https://templatemo.com/tm-568-digimedia
 
 
     <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <header class="header-area header-sticky fixed-top wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -284,6 +263,7 @@ https://templatemo.com/tm-568-digimedia
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
+
 
 
     {% block content %} {% endblock content %}
