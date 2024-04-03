@@ -27,6 +27,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# DEBUG = False
+
+# if DEBUG is False:
+#     ALLOWED_HOSTS = [
+#         '127.0.0.1:8000',
+#         '*',
+#     ]
+
 
 # Application definition
 

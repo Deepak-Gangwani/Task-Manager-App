@@ -118,3 +118,12 @@ class DeleteView(LoginRequiredMixin, DeleteView):
     # fields='__all__'
     # redirect the form page to task page after submit
     success_url = reverse_lazy('tasks')
+
+
+# Page Not Found Error Handling Page
+def handler404(request, exception):
+    return render(request, '404.html', status=404)
+
+# Internal Server Error Handling Page
+def handler500(request):
+    return render(request, '500.html', status=500)
