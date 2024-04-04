@@ -20,7 +20,7 @@
                     {% csrf_token %}
                     <div class="form-group ">
                         <label for="{{ form.username.id_for_label }}">Username:</label>
-                        <input type="text" name="{{ form.username.name }}" class="form-control "
+                        <input type="text" name="{{ form.username.name }}" class="form-control w-100"
                             value="{% if form.username.value %}{{ form.username.value }}{% endif %}" required/>
                         {% if form.username.errors %}
                         <span class="text-danger">{{ form.username.errors }}</span>
